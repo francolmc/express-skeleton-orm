@@ -3,10 +3,6 @@ import cors from 'cors';
 import path from 'path';
 import AllRoutes from './app/index';
 import { consts } from '@config/constants';
-import AppDataSource from '@infra/database/data-source';
-
-// initialize typeorm
-AppDataSource;
 
 const app = express();
 
