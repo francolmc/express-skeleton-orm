@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 import AllRoutes from './app/index';
 import { consts } from '@config/constants';
+import * as methodOverride from 'method-override';
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride.default('_method', { methods: ['POST', 'GET', 'PUT', 'PATCH', 'DELETE'] }));
 
 // routes
 app.use(AllRoutes);

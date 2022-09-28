@@ -1,6 +1,7 @@
 <%- include('../templates/header') %>
-<h1><%= content.title %></h1>
-<h3><%= content.description %></h3>
-<p>Fecha: <%= content.publishDate %></p>
-<p><%= content.content %></p>
+<p><b>ID: </b><%= data.id %></p>
+<p><b>Nombre: </b><%= data.firstName %></p>
+<p><b>Apellidos: </b><%= data.lastName %></p>
+<p><b>Edad: </b><%= data.age %></p>
+<a href="/test">Regresar a la lista</a>
 <%- include('../templates/footer') %>

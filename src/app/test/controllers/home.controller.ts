@@ -1,17 +1,21 @@
 import { Request, Response } from "express";
 import { Service } from "typedi";
-import { HomeBody } from "@core/test/models/home.entity";
 import { HomeService } from "@core/test/services/home.service";
+import UserDTO from "../DTOs/user.dto";
+import UserMapper from "src/share/mappers/user.mapper.";
 
 @Service()
 class HomeController {
+    private _mapper = new UserMapper();
+
     constructor( 
         private readonly _homeService: HomeService
     ) {}
 
-    public home(req: Request, res: Response) {
-        const content: HomeBody = this._homeService.home();
-        res.render('test/index', { content });
+    public async home(req: Request, res: Response) {
+        const allUsers = await this._homeService.showAllUsers();
+        const data: UserDTO[] = allUsers.map((item) => this._mapper.ToDto(item));
+        res.render('test/index', { data });
     }
 }
 

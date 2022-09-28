@@ -1,5 +1,5 @@
-import { Article } from "@core/test/models/article.entity";
+import { UserEntity } from "@core/test/models/user.entity";
 
-export interface ShowServiceContract {
-    show(id: number): Article;
+export default interface ShowServiceContract {
+    show(id: number): Promise<UserEntity | null>;
 }

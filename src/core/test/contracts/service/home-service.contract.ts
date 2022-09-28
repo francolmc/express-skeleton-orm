@@ -1,5 +1,5 @@
-import { HomeBody } from "@core/test/models/home.entity";
+import { UserEntity } from "@core/test/models/user.entity";
 
-export interface HomeServiceContract {
-    home(): HomeBody;
+export default interface HomeServiceContract {
+    showAllUsers(): Promise<UserEntity[]>;
 }
