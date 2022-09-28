@@ -1,7 +1,7 @@
 import CreateServiceContract from '@core/test/contracts/service/create-service.contract';
 import UserRepository from '@infra/database/repository/user-repository';
+import UserMapper from '../../../share/mappers/user.mapper';
 import { Service } from 'typedi';
-import UserMapper from '../../../share/mappers/user.mapper.';
 import { UserEntity } from '../models/user.entity';
 
 @Service()

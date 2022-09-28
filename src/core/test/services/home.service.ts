@@ -1,9 +1,7 @@
-import AppDataSource from "@infra/database/data-source";
-import { User } from "@infra/database/model/user.entity";
 import UserRepository from "@infra/database/repository/user-repository";
+import UserMapper from "../../../share/mappers/user.mapper";
 import { Service } from "typedi";
 import HomeServiceContract from "../contracts/service/home-service.contract";
-import UserMapper from "../../../share/mappers/user.mapper.";
 import { UserEntity } from "../models/user.entity";
 
 @Service()

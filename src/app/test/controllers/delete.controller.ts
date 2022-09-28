@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import UserMapper from "src/share/mappers/user.mapper.";
+import UserMapper from "../../../share/mappers/user.mapper";
 import { Service } from "typedi";
 import { UserEntity } from '@core/test/models/user.entity';
 import DeleteService from '@core/test/services/delete.service';

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Service } from "typedi";
 import { ShowService } from "@core/test/services/show.service";
-import UserMapper from "src/share/mappers/user.mapper.";
+import UserMapper from "../../../share/mappers/user.mapper";
 
 @Service()
 export default class ShowController {

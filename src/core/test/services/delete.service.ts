@@ -1,7 +1,7 @@
 import UserRepository from "@infra/database/repository/user-repository";
+import UserMapper from "../../../share/mappers/user.mapper";
 import { Service } from "typedi";
 import DeleteServiceContract from "../contracts/service/delete-service.contract";
-import UserMapper from "../../../share/mappers/user.mapper.";
 import { UserEntity } from "../models/user.entity";
 
 @Service()

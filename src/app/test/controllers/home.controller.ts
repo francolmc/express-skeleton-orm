@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { Service } from "typedi";
 import { HomeService } from "@core/test/services/home.service";
 import UserDTO from "../DTOs/user.dto";
-import UserMapper from "src/share/mappers/user.mapper.";
+import UserMapper from "../../../share/mappers/user.mapper";
 
 @Service()
 class HomeController {
