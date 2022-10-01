@@ -2,11 +2,15 @@ import { consts } from "@config/constants";
 import { DataSource } from "typeorm";
 
 const AppDataSource = new DataSource({
-    type: 'sqlite',
+    type: "mysql",
+    host: consts.DATABASE_HOST,
+    port: consts.DATABASE_PORT,
+    username: consts.DATABASE_USER,
+    password: consts.DATABASE_PWD,
     database: consts.DATABASE_NAME,
-    entities: [`${__dirname}/model/**/*.entity{.ts,.js}`],
+    entities: [`${__dirname}/model/**/*.entity.js`],
     synchronize: true,
-    migrations: [`${__dirname}/migrations/**/*{.ts,.js}`]
+    migrations: [`${__dirname}/migrations/**/*.js`]
 });
 
 AppDataSource
